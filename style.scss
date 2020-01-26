@@ -1,0 +1,20 @@
+@import "reset.scss";
+
+// utility
+
+.m-50 {
+    margin: 50px 0px;
+}
+
+.container {
+    max-width: 900px;
+    font-size: 16px;
+    margin: 0pc 15px;
+    overflow: hidden;
+}
+
+.header {
+    &__ttl {
+        font-size: 1rem;
+    }
+}
