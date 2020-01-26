@@ -29,14 +29,14 @@ while ($line = fgets($fp)) {
   <meta charset="UTF-8" />
   <title>gainen</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
   <div class="container">
     <div class="header m-50">
       <h1 class="header__ttl">
-        gainen m●●●●●
+        gainen
       </h1>
     </div>
     <form action="" method="post">
