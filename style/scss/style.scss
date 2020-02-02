@@ -107,7 +107,8 @@ $C_ROUND: 6px;
         .idea-item {
             height: 30vw;
             &__inner {
-                border: 1px solid $C_TXT_GREY; 
+                border: 1px solid $C_TXT_GREY;
+                font-size: 2rem;
             }
         }
     }

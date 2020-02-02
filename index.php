@@ -1,6 +1,8 @@
 <?php
-$name = "";
+$title = "";
 $message = "";
+$price = "";
+$user = "";
 
 if (isset($_POST['send']) === true) {
   $title = $_POST["title"];
@@ -61,33 +63,19 @@ while ($line = fgets($fp)) {
 
       </ul>
     </div>
-    <!-- <form action="" method="post">
-      <div>
-      </div>
-    </form> -->
     <div class="modal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <!-- <div class="modal-header"> -->
-          <!-- <h5 class="modal-title">Modal title</h5> -->
-          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button> -->
-          <!-- </div> -->
           <form action="" method="post">
             <div class="modal-body">
-              <!-- <div class="modal-inner__item u_mtb50"> -->
               <div class="form-group u_mtb30">
                 <label for=" title" class="modal_label u_mb10">商品タイトル</label>
                 <input type="text" id="title" name="title" class="modal_input l-w100p" placeholder="Enter Title" />
               </div>
-              <!-- <div class="modal-inner__item u_mtb50"> -->
               <div class="form-group u_mtb30">
                 <label for="message" class="modal_label u_mb10">商品説明</label>
-                <textarea type="text" id="message" name="message" class="modal_input l-w100p" placeholder="Enter Description" rows="7">
-                </textarea>
+                <textarea type="text" id="message" name="message" class="modal_input l-w100p" placeholder="Enter Description" rows="7"></textarea>
               </div>
-
               <div class="form-group u_mtb30">
                 <label for="category" class="modal_label u_mb10">カテゴリー</label>
                 <select id="category" name="category" class="form-control modal_input" placeholder="選択する">
@@ -98,13 +86,10 @@ while ($line = fgets($fp)) {
                   <option>5</option>
                 </select>
               </div>
-
-              <!-- <div class="modal-inner__item u_mtb50"> -->
               <div class="form-group u_mtb30">
                 <label for=" price" class="modal_label u_mb10">値段</label>
                 <input type="text" id="price" name="price" class="modal_input l-w50" placeholder="¥300" />
               </div>
-              <!-- <div class="modal-inner__item u_mtb50"> -->
               <div class="form-group u_mtb30">
                 <label for="user" class="modal_label u_mb10">出品者名</label>
                 <input type="text" id="user" name="user" class="modal_input l-w50" placeholder="Sample" />

@@ -168,7 +168,8 @@ ul {
     .bs-container .idea-contents .idea-item {
       height: 30vw; }
       .bs-container .idea-contents .idea-item__inner {
-        border: 1px solid #e6e6e6; }
+        border: 1px solid #e6e6e6;
+        font-size: 2rem; }
   .bs-container .l-footer {
     position: fixed;
     height: 10vh;
