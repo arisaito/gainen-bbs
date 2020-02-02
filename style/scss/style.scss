@@ -1,20 +1,164 @@
+// foundation
+
 @import "reset.scss";
+$sp: 992px;
+@mixin sp {
+    @media (max-width: $sp){
+        @content
+    }
+};
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 0.2rem;
+    font-size: 18px;
+}
+ul {
+    list-style: none;
+}
 
-// utility
+$C_BRAND: #000000;
+$C_TXT: #000000;
+$C_TXT_GREY: rgb(230, 230, 230);
+$C_TXT_GREY_DARK: rgb(143, 143, 143);
 
-.m-50 {
+$C_ROUND: 6px;
+
+// utility & parts
+.u_mt50 {
+    margin-top: 50px;
+}
+.u_mt100 {
+    margin-top: 100px;
+}
+.u_mb10 {
+    margin-bottom: 10px;
+}
+.u_mb20 {
+    margin-bottom: 20px;
+}
+.u_mtb20 {
+    margin: 20px 0px;
+}
+.u_mtb30 {
+    margin: 30px 0px;
+}
+.u_mtb50 {
     margin: 50px 0px;
 }
-
-.container {
-    max-width: 900px;
-    font-size: 16px;
-    margin: 0pc 15px;
-    overflow: hidden;
+.l-w25 {
+    width: 25%;
+}
+.l-w50 {
+    width: 50%;
+}
+.l-w100p {
+    width: 100%;
+}
+.l-h100p {
+    height: 100%;
+}
+.c-ttl__sub {
+    font-size: 2.8rem;
+    color: $C_TXT;
 }
 
-.header {
-    &__ttl {
-        font-size: 1rem;
+// layout
+
+.bs-container {
+    overflow: hidden;
+    .l-header {
+        position: fixed;
+        height: 10vh;
+        width: 100%;
+        border-bottom: solid $C_TXT_GREY;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        z-index: 100;
+        background: #ffffff;
+        &__ttl {
+            font-size: 2rem;
+            margin: auto;
+            font-size: 4rem;
+        }
+    }
+    .idea-contents {
+        margin: 10vh 0px;
+        &__tag {
+            height: 10vh;
+            width: 100%;
+            display: flex;
+            justify-items: center;
+            align-items: center; 
+            &__item {
+                font-size: 2.3rem;
+                margin: auto;
+                width: 170px;
+                text-align: center;
+                padding: 10px;
+            }
+            .is-active {
+                border-bottom: 10px solid $C_TXT_GREY;
+            }
+        }
+        &__item {
+            margin: 0px 30px;
+        }
+        .idea-item {
+            height: 30vw;
+            &__inner {
+                border: 1px solid $C_TXT_GREY; 
+            }
+        }
+    }
+    .l-footer{
+        position: fixed;
+        height: 10vh;
+        width: 100%;
+        background-color: #ffffff;
+        bottom: 0;
+        z-index: 100;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        .c-ttl__sub {
+            margin: auto;
+        }
+    }
+}
+
+// bs-modal
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+}
+
+.modal-dialog {
+    max-width: 900px;
+    width: 90%;
+}
+
+.modal-body {
+    padding: 8%;
+    font-size: 2rem;
+    .modal_label {
+        display: block;
+        padding: 13px 0px;
+    }
+    .modal_input {
+        border-radius: $C_ROUND;
+        border: 2px solid $C_TXT_GREY_DARK;
+        padding: 16px;
+    }
+    .btn {
+        border-radius: $C_ROUND;
+        width: 70%;
+        height: 90px;
+        font-size: 2rem;
+        display: block;
+        margin: auto;
     }
 }
