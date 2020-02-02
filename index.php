@@ -57,25 +57,26 @@ while ($line = fgets($fp)) {
         <?php foreach ($bord_array as $data) : ?>
           <?= "<li class='idea-item col-md-4'>" ?>
           <div class='idea-item__inner'>
-
-            <?= $data["user"]; ?>
+            <?= $data["title"]; ?>
           </div>
-          <?= "</li>" ?>
+
           <!-- idea detail modal -->
           <div class="idea-contents__modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-body">
-                  <p class="c_txt"><?= $data["description"]; ?></p>
+                  <p class="c_txt">test text</p>
+                  <p class="c_txt">
+                    <?= $data["user"]; ?>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+          <?= "</li>" ?>
         <?php endforeach; ?>
       </ul>
     </div>
-
-
     <div class="l-footer">
       <div class="l-footer__inner">
         <p class="c-ttl__sub">

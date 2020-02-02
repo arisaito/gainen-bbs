@@ -189,13 +189,6 @@ ul {
       .bs-container .idea-contents__modal .modal-body {
         padding: 8%;
         font-size: 2rem; }
-        .bs-container .idea-contents__modal .modal-body .modal_label {
-          display: block;
-          padding: 13px 0px; }
-        .bs-container .idea-contents__modal .modal-body .modal_input {
-          border-radius: 6px;
-          border: 2px solid #8f8f8f;
-          padding: 16px; }
         .bs-container .idea-contents__modal .modal-body .btn {
           border-radius: 6px;
           width: 70%;

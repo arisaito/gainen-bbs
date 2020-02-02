@@ -131,15 +131,6 @@ $C_ROUND: 6px;
             .modal-body {
                 padding: 8%;
                 font-size: 2rem;
-                .modal_label {
-                    display: block;
-                    padding: 13px 0px;
-                }
-                .modal_input {
-                    border-radius: $C_ROUND;
-                    border: 2px solid $C_TXT_GREY_DARK;
-                    padding: 16px;
-                }
                 .btn {
                     border-radius: $C_ROUND;
                     width: 70%;
