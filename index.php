@@ -10,7 +10,7 @@ if (isset($_POST['send']) === true) {
   $price = $_POST["price"];
   $user = $_POST["user"];
   $fp = fopen("bord.txt", "a");
-  fwrite($fp, $user . "\t" . $message . "\n");
+  fwrite($fp, $title . "\t" . $message . "\t" . $price . "\t" . $user . "\n");
   fclose($fp);
 }
 
@@ -20,8 +20,10 @@ $bord_array = [];
 while ($line = fgets($fp)) {
   $temp = explode("\t", $line);
   $temp_array = [
-    "user" =>
-    $temp[0], "message" => $temp[1]
+    "title" => $temp[0],
+    "message" => $temp[1],
+    "price" => $temp[2],
+    "user" => $temp[3]
   ];
   $bord_array[] = $temp_array;
 } ?>
@@ -52,18 +54,37 @@ while ($line = fgets($fp)) {
         <h2 class="idea-contents__tag__item is-active">新着</h2>
       </div>
       <ul class="row idea-contents__item">
-
         <?php foreach ($bord_array as $data) : ?>
           <?= "<li class='idea-item col-md-4'>" ?>
           <div class='idea-item__inner'>
-            <?= $data["user"] . ":" . $data["message"]; ?>
+
+            <?= $data["user"]; ?>
           </div>
           <?= "</li>" ?>
+          <!-- idea detail modal -->
+          <div class="idea-contents__modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <p class="c_txt"><?= $data["description"]; ?></p>
+                </div>
+              </div>
+            </div>
+          </div>
         <?php endforeach; ?>
-
       </ul>
     </div>
-    <div class="modal" tabindex="-1" role="dialog">
+
+
+    <div class="l-footer">
+      <div class="l-footer__inner">
+        <p class="c-ttl__sub">
+          出品する
+        </p>
+      </div>
+    </div>
+    <!-- footer modal -->
+    <div class="l-footer__modal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <form action="" method="post">
@@ -102,13 +123,6 @@ while ($line = fgets($fp)) {
             </div>
           </form>
         </div>
-      </div>
-    </div>
-    <div class="l-footer">
-      <div class="l-footer__inner">
-        <p class="c-ttl__sub">
-          出品する
-        </p>
       </div>
     </div>
 </body>

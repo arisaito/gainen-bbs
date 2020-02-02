@@ -57,6 +57,9 @@ $C_ROUND: 6px;
 .l-h100p {
     height: 100%;
 }
+.c_txt {
+    font-size: 2rem;
+}
 .c-ttl__sub {
     font-size: 2.8rem;
     color: $C_TXT;
@@ -106,9 +109,45 @@ $C_ROUND: 6px;
         }
         .idea-item {
             height: 30vw;
+            margin-bottom: 30px;
             &__inner {
-                border: 1px solid $C_TXT_GREY;
+                background: $C_TXT_GREY_DARK;
+                width: 100%;
+                height: 100%;
+                // border: 1px solid $C_TXT_GREY;
                 font-size: 2rem;
+            }
+        }
+        &__modal {
+            background: rgba(0, 0, 0, 0.1);
+            font-size: 2rem;
+            display: none;
+            z-index: 200;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            .modal-body {
+                padding: 8%;
+                font-size: 2rem;
+                .modal_label {
+                    display: block;
+                    padding: 13px 0px;
+                }
+                .modal_input {
+                    border-radius: $C_ROUND;
+                    border: 2px solid $C_TXT_GREY_DARK;
+                    padding: 16px;
+                }
+                .btn {
+                    border-radius: $C_ROUND;
+                    width: 70%;
+                    height: 90px;
+                    font-size: 2rem;
+                    display: block;
+                    margin: auto;
+                }
             }
         }
     }
@@ -132,34 +171,40 @@ $C_ROUND: 6px;
 
 // bs-modal
 
-.modal {
-    background: rgba(0, 0, 0, 0.5);
-    font-size: 2rem;
-}
 
 .modal-dialog {
     max-width: 900px;
     width: 90%;
 }
 
-.modal-body {
-    padding: 8%;
+.l-footer__modal {
+    background: rgba(0, 0, 0, 0.5);
     font-size: 2rem;
-    .modal_label {
-        display: block;
-        padding: 13px 0px;
-    }
-    .modal_input {
-        border-radius: $C_ROUND;
-        border: 2px solid $C_TXT_GREY_DARK;
-        padding: 16px;
-    }
-    .btn {
-        border-radius: $C_ROUND;
-        width: 70%;
-        height: 90px;
+    display: none;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .modal-body {
+        padding: 8%;
         font-size: 2rem;
-        display: block;
-        margin: auto;
+        .modal_label {
+            display: block;
+            padding: 13px 0px;
+        }
+        .modal_input {
+            border-radius: $C_ROUND;
+            border: 2px solid $C_TXT_GREY_DARK;
+            padding: 16px;
+        }
+        .btn {
+            border-radius: $C_ROUND;
+            width: 70%;
+            height: 90px;
+            font-size: 2rem;
+            display: block;
+            margin: auto;
+        }
     }
 }
