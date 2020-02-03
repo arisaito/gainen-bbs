@@ -65,19 +65,20 @@ while ($line = fgets($fp)) {
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-body">
-                  <p class="c_ttl__sub">
+                  <div class="idea-contents__modal__box u_mb40"></div>
+                  <p class="c_ttl__sub u_mb20">
                     <?= $data["title"]; ?>
                   </p>
-                  <p class="c_txt">
+                  <p class="c_txt u_mb20">
                     <?= $data["message"]; ?>
                   </p>
-                  <p class="c_txt">
+                  <p class="c_txt">出品者:
                     <?= $data["user"]; ?>
                   </p>
                   <div class="u_mt100">
                     <input value="購入する" class="btn btn-primary" />
                     <br>
-                    <button type="button" class="btn btn-secondary modal-btn--cancel">閉じる</button>
+                    <button type="button" class="btn btn-secondary idea-modal__btn--cancel">閉じる</button>
                   </div>
                 </div>
               </div>

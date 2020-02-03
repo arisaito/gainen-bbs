@@ -36,6 +36,9 @@ $C_ROUND: 6px;
 .u_mb20 {
     margin-bottom: 20px;
 }
+.u_mb40 {
+    margin-bottom: 40px;
+}
 .u_mtb20 {
     margin: 20px 0px;
 }
@@ -64,7 +67,7 @@ $C_ROUND: 6px;
     font-size: 3rem;
 }
 .c-ttl__sub {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     color: $C_TXT;
 }
 
@@ -81,15 +84,16 @@ $C_ROUND: 6px;
         justify-items: center;
         align-items: center;
         z-index: 100;
-        background: #ffffff;
+        background: $C_TXT_GREY;
         &__ttl {
-            font-size: 2rem;
             margin: auto;
-            font-size: 4rem;
+            font-size: 3rem;
         }
     }
     .idea-contents {
         margin: 10vh 0px;
+        height: 80vh;
+        background: $C_TXT_GREY;
         &__tag {
             height: 10vh;
             width: 100%;
@@ -104,7 +108,7 @@ $C_ROUND: 6px;
                 padding: 10px;
             }
             .is-active {
-                border-bottom: 10px solid $C_TXT_GREY;
+                border-bottom: 1.5px solid $C_TXT;
             }
         }
         &__item {
@@ -114,10 +118,10 @@ $C_ROUND: 6px;
             height: 30vw;
             margin-bottom: 30px;
             &__inner {
-                background: $C_TXT_GREY_DARK;
+                background: #ffffff;
                 width: 100%;
                 height: 100%;
-                // border: 1px solid $C_TXT_GREY;
+                padding: 20px;
                 font-size: 2rem;
             }
         }
@@ -143,6 +147,11 @@ $C_ROUND: 6px;
                     display: block;
                     margin: auto;
                 }
+            }
+            &__box {
+                width: 100%;
+                height: 700px;
+                background: $C_TXT_GREY_DARK;
             }
         }
     }
