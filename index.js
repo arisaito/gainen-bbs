@@ -9,11 +9,16 @@ window.addEventListener("load", function() {
     });
   });
 
-  $(".idea-item").click(() => {
-    console.log("idea!");
-    $(".idea-contents__modal").fadeIn(300);
+  let flag = false;
+  if (flag == false) {
+    $(".idea-item").click(e => {
+      console.log("idea!");
+      flag = true;
+      $(".idea-contents__modal").fadeIn(300);
+    });
     $(".modal-btn--cancel").click(() => {
       $(".idea-contents__modal").fadeOut(300);
+      flag = false;
     });
-  });
+  }
 });
