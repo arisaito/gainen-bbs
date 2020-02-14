@@ -2,8 +2,10 @@ $(window).resize(resizeItem);
 function resizeItem() {
   let ideaItem = document.querySelector(".idea-item__inner");
   let ideaWidth = ideaItem.clientWidth;
-  console.log(ideaWidth);
   $(".idea-item__inner").css("height", ideaWidth);
+  // let ideaBox = document.querySelector(".idea-contents__modal__box");
+  // let ideaBoxWidth = ideaBox.clientWidth;
+  // $("idea-contents__modal__box").css("height", ideaBoxWidth);
 }
 
 window.addEventListener("load", function() {
@@ -11,6 +13,11 @@ window.addEventListener("load", function() {
   let ideaWidth = ideaItem.clientWidth;
   console.log(ideaWidth);
   $(".idea-item__inner").css("height", ideaWidth);
+
+  let ideaBox = document.querySelector(".idea-contents__modal__box");
+  let ideaBoxWidth = ideaBox.clientWidth;
+  console.log(ideaBoxWidth);
+  $("idea-contents__modal__box").css("height", ideaBoxWidth);
 
   $(".l-footer").click(() => {
     console.log("footer");

@@ -110,7 +110,7 @@ while ($line = fgets($fp)) {
                   <p class="c_txt">出品者:
                     <?= $data["user"]; ?>
                   </p>
-                  <div class="u_mt100">
+                  <div class="u_mt20">
                     <input value="購入する" class="btn btn-primary" />
                     <br>
                     <button type="button" class="btn btn-secondary idea-modal__btn--cancel">閉じる</button>
@@ -136,15 +136,15 @@ while ($line = fgets($fp)) {
         <div class="modal-content">
           <form action="" method="post">
             <div class="modal-body">
-              <div class="form-group u_mtb30">
+              <div class="form-group u_mtb20">
                 <label for=" title" class="modal_label u_mb10">商品タイトル</label>
                 <input type="text" id="title" name="title" class="modal_input l-w100p" placeholder="Enter Title" />
               </div>
-              <div class="form-group u_mtb30">
+              <div class="form-group u_mtb20">
                 <label for="message" class="modal_label u_mb10">商品説明</label>
                 <textarea type="text" id="message" name="message" class="modal_input l-w100p" placeholder="Enter Description" rows="7"></textarea>
               </div>
-              <div class="form-group u_mtb30">
+              <div class="form-group u_mtb20">
                 <label for="category" class="modal_label u_mb10">カテゴリー</label>
                 <select id="category" name="category" class="form-control modal_input" placeholder="選択する">
                   <option>1</option>
@@ -154,15 +154,15 @@ while ($line = fgets($fp)) {
                   <option>5</option>
                 </select>
               </div>
-              <div class="form-group u_mtb30">
+              <div class="form-group u_mtb20">
                 <label for=" price" class="modal_label u_mb10">値段</label>
                 <input type="text" id="price" name="price" class="modal_input l-w50" placeholder="¥300" />
               </div>
-              <div class="form-group u_mtb30">
+              <div class="form-group u_mtb20">
                 <label for="user" class="modal_label u_mb10">出品者名</label>
                 <input type="text" id="user" name="user" class="modal_input l-w50" placeholder="Sample" />
               </div>
-              <div class="u_mt100">
+              <div class="">
                 <input type="submit" name="send" value="出品する" class="btn btn-primary" />
                 <br>
                 <button type="button" class="btn btn-secondary modal-btn--cancel">キャンセル</button>
