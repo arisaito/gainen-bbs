@@ -33,6 +33,7 @@ while ($line = fgets($fp)) {
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>thought market</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
@@ -44,6 +45,38 @@ while ($line = fgets($fp)) {
 <body>
   <div class="bs-container">
     <div class="l-header">
+      <!-- humburger -->
+      <nav class="hamburger-menu">
+        <!-- <div class="hamburger-menu__inner">
+          <div class="hamburger-menu__header">
+            <p class="c-ttl">シーンを選ぶ</p>
+            <div class="c-btn--close">×</div>
+          </div>
+          <p>メニュー１</p>
+          <p>メニュー１</p>
+          <p>メニュー１</p>
+          <p>メニュー１</p>
+          <p>メニュー１</p>
+        </div> -->
+        <label class="menu-open-button" for="menu-open">
+          <span class="lines line-1"></span>
+          <span class="lines line-2"></span>
+          <span class="lines line-3"></span>
+        </label>
+      </nav>
+
+      <!-- <div id="nav-drawer">
+        <label class="menu-open-button" for="menu-open">
+          <span class="lines line-1"></span>
+          <span class="lines line-2"></span>
+          <span class="lines line-3"></span>
+        </label> -->
+      <!-- <input id="nav-input" type="checkbox" class="nav-unshown">
+        <label id="nav-open" for="nav-input"><span></span></label>
+        <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+        <div id="nav-content">ここに中身を入れる</div> -->
+      <!-- </div> -->
+
       <h1 class="l-header__ttl">
         Thought Market
       </h1>
@@ -55,7 +88,7 @@ while ($line = fgets($fp)) {
       </div>
       <ul class="row idea-contents__item">
         <?php foreach ($bord_array as $data) : ?>
-          <?= "<li class='idea-item col-md-4'>" ?>
+          <?= "<li class='idea-item col-4'>" ?>
           <div class='idea-item__inner'>
             <?= $data["title"]; ?>
           </div>

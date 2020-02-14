@@ -10,7 +10,7 @@ $sp: 992px;
 body {
     font-family: 'Noto Sans JP', sans-serif;
     letter-spacing: 0.2rem;
-    font-size: 18px;
+    font-size: 16px; 
 }
 ul {
     list-style: none;
@@ -64,10 +64,10 @@ $C_ROUND: 6px;
     font-size: 2rem;
 }
 .c-ttl {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 .c-ttl__sub {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
     color: $C_TXT;
 }
 
@@ -75,6 +75,9 @@ $C_ROUND: 6px;
 
 .bs-container {
     overflow: hidden;
+    max-width: 980px;
+    margin: auto;
+    background: $C_TXT_GREY;
     .l-header {
         position: fixed;
         height: 10vh;
@@ -87,7 +90,7 @@ $C_ROUND: 6px;
         background: $C_TXT_GREY;
         &__ttl {
             margin: auto;
-            font-size: 3rem;
+            font-size: 1.2rem;
         }
     }
     .idea-contents {
@@ -95,15 +98,15 @@ $C_ROUND: 6px;
         height: 80vh;
         background: $C_TXT_GREY;
         &__tag {
-            height: 10vh;
+            height: 7vh;
             width: 100%;
             display: flex;
             justify-items: center;
             align-items: center; 
             &__item {
-                font-size: 2.3rem;
+                font-size: 1rem;
                 margin: auto;
-                width: 170px;
+                width: 100px;
                 text-align: center;
                 padding: 10px;
             }
@@ -117,12 +120,13 @@ $C_ROUND: 6px;
         .idea-item {
             height: 30vw;
             margin-bottom: 30px;
+            padding: 3px;
             &__inner {
                 background: #ffffff;
                 width: 100%;
-                height: 100%;
+                // height: 100%;
                 padding: 20px;
-                font-size: 2rem;
+                font-size: 0.8rem;
             }
         }
         &__modal {
@@ -157,8 +161,164 @@ $C_ROUND: 6px;
     }
 }
 
-// bs-modal
+// humburger
 
+// hamburger 
+
+.hamburger-menu {
+    &__inner {
+        background: #ffffff;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 200;
+        top: 0;
+        left: 0;
+        transform : translate(-100vw, 0px);
+        .hamburger-menu__header {
+            height: 60px;
+            padding: 17px 30px;
+            border-bottom: solid 0.5px #c7c7c7;
+        }
+        .c-ttl {
+            text-align: left;
+            font-weight: normal;
+            display: inline;
+        }
+        .c-btn--close {
+            font-size: 2rem;
+            text-align: center;
+            display: inline;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+        }
+        .c-btn--scene {
+            display: block;
+            height: 60px;
+            padding: 17px 30px;
+            color: #222222;
+        }
+        .is-active {
+            color: #bdbdbd;
+        }
+    }
+    
+}
+.menu-open-button {
+    display: inline;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+}
+.lines {
+    width: 23px;
+    height: 2.5px;
+    background: #161616;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -12.5px;
+    margin-top: -1.5px;
+    -webkit-transition: -webkit-transform 200ms;
+    transition: -webkit-transform 200ms;
+    transition: transform 200ms;
+    transition: transform 200ms, -webkit-transform 200ms;
+}
+.line-1 {
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0);
+}
+.line-2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.line-3 {
+    -webkit-transform: translate3d(0, 8px, 0);
+    transform: translate3d(0, 8px, 0);
+}
+
+// #nav-drawer {
+//     position: relative;
+//   }
+  
+//   /*チェックボックス等は非表示に*/
+//   .nav-unshown {
+//     display:none;
+//   }
+  
+//   /*アイコンのスペース*/
+//   #nav-open {
+//     display: inline-block;
+//     width: 30px;
+//     height: 22px;
+//     vertical-align: middle;
+//   }
+  
+//   /*ハンバーガーアイコンをCSSだけで表現*/
+//   #nav-open span, #nav-open span:before, #nav-open span:after {
+//     position: absolute;
+//     height: 3px;/*線の太さ*/
+//     width: 25px;/*長さ*/
+//     border-radius: 3px;
+//     background: #555;
+//     display: block;
+//     content: '';
+//     cursor: pointer;
+//   }
+//   #nav-open span:before {
+//     bottom: -8px;
+//   }
+//   #nav-open span:after {
+//     bottom: -16px;
+//   }
+  
+//   /*閉じる用の薄黒カバー*/
+//   #nav-close {
+//     display: none;/*はじめは隠しておく*/
+//     position: fixed;
+//     z-index: 99;
+//     top: 0;/*全体に広がるように*/
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: black;
+//     opacity: 0;
+//     transition: .3s ease-in-out;
+//   }
+  
+//   /*中身*/
+//   #nav-content {
+//     overflow: auto;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     z-index: 9999;/*最前面に*/
+//     width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+//     max-width: 330px;/*最大幅（調整してください）*/
+//     height: 100%;
+//     background: #fff;/*背景色*/
+//     transition: .3s ease-in-out;/*滑らかに表示*/
+//     -webkit-transform: translateX(-105%);
+//     transform: translateX(-105%);/*左に隠しておく*/
+//   }
+  
+//   /*チェックが入ったらもろもろ表示*/
+//   #nav-input:checked ~ #nav-close {
+//     display: block;/*カバーを表示*/
+//     opacity: .5;
+//   }
+  
+//   #nav-input:checked ~ #nav-content {
+//     -webkit-transform: translateX(0%);
+//     transform: translateX(0%);/*中身を表示（右へスライド）*/
+//     box-shadow: 6px 0 25px rgba(0,0,0,.15);
+//   }
+
+// bs-modal
 
 .modal-dialog {
     max-width: 900px;
