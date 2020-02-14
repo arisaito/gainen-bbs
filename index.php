@@ -47,17 +47,19 @@ while ($line = fgets($fp)) {
     <div class="l-header">
       <!-- humburger -->
       <nav class="hamburger-menu">
-        <!-- <div class="hamburger-menu__inner">
+        <div class="hamburger-menu__inner">
           <div class="hamburger-menu__header">
             <p class="c-ttl">シーンを選ぶ</p>
             <div class="c-btn--close">×</div>
           </div>
-          <p>メニュー１</p>
-          <p>メニュー１</p>
-          <p>メニュー１</p>
-          <p>メニュー１</p>
-          <p>メニュー１</p>
-        </div> -->
+          <div class="hamburger-menu__body">
+            <p>メニュー１</p>
+            <p>メニュー１</p>
+            <p>メニュー１</p>
+            <p>メニュー１</p>
+            <p>メニュー１</p>
+          </div>
+        </div>
         <label class="menu-open-button" for="menu-open">
           <span class="lines line-1"></span>
           <span class="lines line-2"></span>

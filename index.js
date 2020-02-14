@@ -1,5 +1,4 @@
 $(window).resize(resizeItem);
-
 function resizeItem() {
   let ideaItem = document.querySelector(".idea-item__inner");
   let ideaWidth = ideaItem.clientWidth;
@@ -8,7 +7,6 @@ function resizeItem() {
 }
 
 window.addEventListener("load", function() {
-  // dom
   let ideaItem = document.querySelector(".idea-item__inner");
   let ideaWidth = ideaItem.clientWidth;
   console.log(ideaWidth);
@@ -30,6 +28,7 @@ window.addEventListener("load", function() {
       $(".idea-contents__modal").fadeOut(300);
     });
   });
+
   $(".menu-open-button").click(function() {
     $(".hamburger-menu__inner").removeClass("js-slide-anim-out");
     $(".hamburger-menu__inner").addClass("js-slide-anim");
